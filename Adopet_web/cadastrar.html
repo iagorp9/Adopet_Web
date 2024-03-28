@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Nicolas Melos,Iago Rosa">
+		<meta name="description" content="pagina cadastro adopet">
+		<meta name="keyword" content="animal,pet, adopt, adocao ">
+		<title>Cadastro-Adocao de Animais</title>
+		<link rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="js/script.js"></script>
+		<style>
+			h1 {
+				color: #000000	;
+				text-align: center;
+				margin: 20px 0;
+			}
+		</style>
+	</head>
+<body>
+	<h1>Cadastro de Animais</h1>
+	<form method="post" name="cadastrar" action="" onSubmit="return validar()">
+		<label id="n">Nome:</label>
+		<input type="text" id="nome" name="nome"><br>
+
+		<label id="e">Espécie:</label>
+		<input type="text" id="especie" name="especie"><br>
+
+		<label id="r">Raça:</label>
+		<input type="text" id="raca" name="raca"><br>
+		
+		<label id="s">Sexo:</label>
+		<select id="sexo" name="sexo">
+			<option value="vazio">Selecione...</option>
+			<option value="macho">Macho</option>
+			<option value="femea">Fêmea</option>
+			<option value="indefinido">Indefinido</option>
+		</select>
+
+		<label id="i">Idade:</label>
+		<input type="number" id="idade" name="idade"><br>
+
+		<label id="d">Descrição:</label>
+		<textarea id="descricao" name="descricao"></textarea><br>
+		<br>
+		<label for="imagem">Adicione uma foto:</label>
+		<input type="file"/>
+		<br/>
+		<br>
+		<input type="button" name="botao" value="Cadastrar" onclick="validar()">
+		</form>
+		<h1 id="erro" style="color:red"></h1>
+	</body>
+</html>
